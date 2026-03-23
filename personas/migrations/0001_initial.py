@@ -1,0 +1,21 @@
+from django.db import migrations, models
+
+
+class Migration(migrations.Migration):
+    initial = True
+
+    dependencies = []
+
+    operations = [
+        migrations.CreateModel(
+            name='Persona',
+            fields=[
+                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('numero_persona', models.PositiveIntegerField(unique=True)),
+                ('apellido', models.CharField(max_length=100)),
+                ('cedula', models.CharField(max_length=20, unique=True)),
+                ('edad', models.PositiveIntegerField()),
+            ],
+            options={'ordering': ['numero_persona']},
+        ),
+    ]

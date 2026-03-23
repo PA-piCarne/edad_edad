@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Promedio de edades{% endblock %}
+{% block content %}
+<h2>Promedio de edades</h2>
+{% if total_personas %}
+<p>El promedio actual de edades es: <strong>{{ promedio|floatformat:2 }}</strong></p>
+<p>Total de personas consideradas: <strong>{{ total_personas }}</strong></p>
+{% else %}
+<p class="empty">No hay datos suficientes para calcular el promedio.</p>
+{% endif %}
+<div class="actions">
+    <a class="button secondary" href="{% url 'lobby' %}">Volver al lobby</a>
+</div>
+{% endblock %}

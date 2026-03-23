@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Persona con menor edad{% endblock %}
+{% block content %}
+<h2>Persona con menor edad</h2>
+{% if persona %}
+<ul>
+    <li><strong>ID:</strong> {{ persona.id }}</li>
+    <li><strong>Número de persona:</strong> {{ persona.numero_persona }}</li>
+    <li><strong>Apellido:</strong> {{ persona.apellido }}</li>
+    <li><strong>Cédula:</strong> {{ persona.cedula }}</li>
+    <li><strong>Edad:</strong> {{ persona.edad }}</li>
+</ul>
+{% else %}
+<p class="empty">Todavía no existen personas registradas.</p>
+{% endif %}
+<div class="actions">
+    <a class="button secondary" href="{% url 'lobby' %}">Volver al lobby</a>
+</div>
+{% endblock %}
