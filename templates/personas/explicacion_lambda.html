@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}Explicación de lambda{% endblock %}
+{% block content %}
+<h2>Lógica de la expresión lambda</h2>
+<p>En esta aplicación, las expresiones <code>lambda</code> se usan para resolver operaciones pequeñas de forma directa dentro de las vistas.</p>
+{% for ejemplo in ejemplos %}
+<div class="card" style="margin-top: 1rem;">
+    <h3>{{ ejemplo.titulo }}</h3>
+    <p><code>{{ ejemplo.codigo }}</code></p>
+    <p>{{ ejemplo.descripcion }}</p>
+</div>
+{% endfor %}
+<div class="actions">
+    <a class="button secondary" href="{% url 'lobby' %}">Volver al lobby</a>
+</div>
+{% endblock %}
