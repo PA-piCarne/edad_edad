@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Explicación de base de datos{% endblock %}
+{% block content %}
+<h2>Cómo conecté la aplicación a la base de datos</h2>
+<p>La aplicación está preparada para trabajar con <strong>SQLite</strong>, que puedes abrir con <strong>DB Browser for SQLite</strong>.</p>
+<ol>
+    {% for paso in pasos %}
+    <li>{{ paso }}</li>
+    {% endfor %}
+</ol>
+<p><strong>Archivo de base de datos:</strong> <code>db.sqlite3</code></p>
+<div class="actions">
+    <a class="button secondary" href="{% url 'lobby' %}">Volver al lobby</a>
+</div>
+{% endblock %}

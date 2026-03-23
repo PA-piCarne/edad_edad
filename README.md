@@ -8,6 +8,8 @@ Este proyecto crea una aplicación Django conectada a **SQLite** mediante el arc
 - Pantalla con todas las personas registradas.
 - Pantalla con el promedio de edades.
 - Pantalla con la persona de menor edad.
+- Plantilla explicativa del paso a paso de la conexión con SQLite y DB Browser for SQLite.
+- Plantilla explicativa sobre la lógica de las expresiones `lambda`.
 - Uso explícito de funciones `lambda` en las vistas para serializar, calcular promedio y detectar la menor edad.
 
 ## Ejecutar
