@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Lobby{% endblock %}
+{% block content %}
+<h2>Lobby principal</h2>
+<p>Desde aquí puedes navegar a todas las plantillas solicitadas.</p>
+<div class="grid menu">
+    <a class="card" href="{% url 'crear_persona' %}">
+        <h3>Registrar persona</h3>
+        <p>Formulario para guardar ID automático, número de persona, apellido, cédula y edad.</p>
+    </a>
+    <a class="card" href="{% url 'listar_personas' %}">
+        <h3>Ver personas registradas</h3>
+        <p>Muestra todas las filas almacenadas en la tabla Persona.</p>
+    </a>
+    <a class="card" href="{% url 'promedio_edades' %}">
+        <h3>Promedio de edades</h3>
+        <p>Calcula el promedio de las edades registradas usando funciones lambda.</p>
+    </a>
+    <a class="card" href="{% url 'persona_menor_edad' %}">
+        <h3>Persona con menor edad</h3>
+        <p>Encuentra el registro con la edad más baja usando lambda.</p>
+    </a>
+</div>
+{% endblock %}

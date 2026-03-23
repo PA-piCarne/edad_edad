@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block title %}Personas registradas{% endblock %}
+{% block content %}
+<h2>Personas registradas</h2>
+{% if personas %}
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Número de persona</th>
+            <th>Apellido</th>
+            <th>Cédula</th>
+            <th>Edad</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for persona in personas %}
+        <tr>
+            <td>{{ persona.id }}</td>
+            <td>{{ persona.numero_persona }}</td>
+            <td>{{ persona.apellido }}</td>
+            <td>{{ persona.cedula }}</td>
+            <td>{{ persona.edad }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p class="empty">Aún no hay personas registradas.</p>
+{% endif %}
+<div class="actions">
+    <a class="button" href="{% url 'crear_persona' %}">Registrar otra persona</a>
+    <a class="button secondary" href="{% url 'lobby' %}">Volver al lobby</a>
+</div>
+{% endblock %}

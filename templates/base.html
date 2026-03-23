@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Gestión de Personas{% endblock %}</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f7fb; color: #1f2937; margin: 0; }
+        header { background: #1d4ed8; color: white; padding: 1.5rem; text-align: center; }
+        main { max-width: 960px; margin: 2rem auto; background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,.08); }
+        .grid { display: grid; gap: 1rem; }
+        .menu { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+        .card, .button { border: 1px solid #dbe3ef; border-radius: 10px; padding: 1rem; text-decoration: none; color: inherit; }
+        .button { display: inline-block; background: #2563eb; color: white; border: none; cursor: pointer; }
+        .button.secondary { background: #475569; }
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { border: 1px solid #dbe3ef; padding: .75rem; text-align: left; }
+        th { background: #eff6ff; }
+        form p { display: grid; gap: .35rem; margin-bottom: 1rem; }
+        .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1rem; }
+        .empty { padding: 1rem; background: #f8fafc; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gestión de Personas</h1>
+        <p>Aplicación Django conectada a SQLite, compatible con DB Browser for SQLite.</p>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>
